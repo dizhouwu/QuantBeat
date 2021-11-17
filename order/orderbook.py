@@ -15,10 +15,11 @@ class OrderBook:
 
     @process_order.register
     def _(self, order: MarketOrder):
-
+        ...
 
     @process_order.regester
     def _(self, order: LimitOrder):
+        ...
 
     @process_order.regester
     def _(self, order: CancelOrder):
