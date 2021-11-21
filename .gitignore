@@ -1,0 +1,5 @@
+*.csv
+scratch*.py
+__pycache__/
+build/
+.ipynb_checkpoints
