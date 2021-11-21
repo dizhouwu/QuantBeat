@@ -1,2 +1,2 @@
 # QuantBeat
-Self-study quant development repo
+Self-study quant development and research lab
