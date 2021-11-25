@@ -55,7 +55,7 @@ class LimitOrder(Order):
             return self.ts < other.ts
 
         elif self.size != other.size:
-            self.size < other.size
+            return self.size < other.size
 
     def __repr__(self):
         return f"Limit Order {self.side} {self.size} {self.ts}"
