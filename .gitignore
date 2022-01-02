@@ -3,3 +3,6 @@ scratch*
 __pycache__/
 build/
 .ipynb_checkpoints
+/external/analytic_shrinkage/.circleci/
+/external/analytic_shrinkage/requirements.txt
+/external/analytic_shrinkage/setup.py

@@ -173,7 +173,7 @@ namespace mp {
 		shared_ptr(std::nullptr_t) :pref_(nullptr), ptr_(nullptr) {
 		}
 
-        template<class D> shared_ptr(std::nullptr_t, D del) : 
+        template<class D> shared_ptr(std::nullptr_t, D del) :
             pref_(new RefCountDel<T, D>(nullptr, del)), ptr_(nullptr) {
         }
 
@@ -181,19 +181,19 @@ namespace mp {
 			pref_(nullptr), ptr_(nullptr){
 			reset_ref(ptr, u.pref_);
 		}
-        
+
 		shared_ptr(const shared_ptr& rhs):
 			pref_(nullptr), ptr_(nullptr) {
 			reset_ref(rhs.ptr_, rhs.pref_);
 		}
 
-		template<class U> shared_ptr(const shared_ptr<U>& rhs): 
+		template<class U> shared_ptr(const shared_ptr<U>& rhs):
             ptr_(nullptr), pref_(nullptr) {
 			reset_ref(rhs.ptr_, rhs.pref_);
 		}
 
         // move ctor
-		shared_ptr(shared_ptr&& rhs): 
+		shared_ptr(shared_ptr&& rhs):
             pref_(rhs.pref_), ptr_(rhs.ptr_) {
 			rhs.pref_ = nullptr;
 			rhs.ptr_ = nullptr;
@@ -202,7 +202,7 @@ namespace mp {
 			rhs.pref_ = nullptr;
 			rhs.ptr_ = nullptr;
 		}
-		
+
 		shared_ptr& operator=(const shared_ptr& rhs) {
 			reset_ref(rhs.ptr_, rhs.pref_);
 			return *this;
@@ -281,7 +281,7 @@ namespace mp {
 			}
             reset_ref_0(ptr, refCount);
 		}
-		
+
 
 		void Decref() {
 			if (pref_) {
@@ -300,35 +300,35 @@ namespace mp {
         lhs.swap(rhs);
     }
 
-    template < class T, class U > 
+    template < class T, class U >
     bool operator==(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() == rhs.get();
     }
 
-    template< class T, class U > 
+    template< class T, class U >
     bool operator!=(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() != rhs.get();
     }
 
-    template< class T, class U > 
+    template< class T, class U >
     bool operator<(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() < rhs.get();
     }
-    template< class T, class U > 
+    template< class T, class U >
     bool operator>(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() > rhs.get();
     }
-    template< class T, class U > 
+    template< class T, class U >
     bool operator<=(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() <= rhs.get();
     }
 
-    template< class T, class U > 
+    template< class T, class U >
     bool operator>=(const shared_ptr<T>& lhs, const shared_ptr<U>& rhs) {
         return lhs.get() >= rhs.get();
     }
 
-    template< class T > 
+    template< class T >
     bool operator==(const shared_ptr<T>& lhs, std::nullptr_t) {
         return lhs.get() == nullptr;
     }
