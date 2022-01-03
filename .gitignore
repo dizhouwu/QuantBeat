@@ -6,3 +6,6 @@ build/
 /external/analytic_shrinkage/.circleci/
 /external/analytic_shrinkage/requirements.txt
 /external/analytic_shrinkage/setup.py
+.vs
+.idea
+/cpplearn/cpp_py_hybrid/src/x64/
