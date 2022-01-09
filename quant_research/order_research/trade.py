@@ -1,4 +1,4 @@
-from order_research.order import Side
+from quant_research.order_research.order import Side
 from time import time
 
 

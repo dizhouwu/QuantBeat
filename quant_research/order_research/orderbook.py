@@ -1,8 +1,8 @@
-from order_research.order import MarketOrder, LimitOrder, CancelOrder, Order
+from quant_research.order_research.order import MarketOrder, LimitOrder, CancelOrder, Order
 from sortedcontainers import SortedList
 from functools import singledispatchmethod
-from order_research.order import Side
-from order_research.trade import Trade
+from quant_research.order_research.order import Side
+from quant_research.order_research.trade import Trade
 from typing import Union
 
 

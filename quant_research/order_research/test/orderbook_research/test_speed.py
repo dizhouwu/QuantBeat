@@ -1,7 +1,7 @@
-from order_research.orderbook import OrderBook
-from order_research.order import LimitOrder, Side
+from quant_research.order_research.orderbook import OrderBook
+from quant_research.order_research.order import LimitOrder, Side
 from time import time
-from random import getrandbits, randint, random
+from random import getrandbits, randint
 
 ob = OrderBook()
 n_orders = 10000
