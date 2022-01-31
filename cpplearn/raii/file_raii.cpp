@@ -11,7 +11,7 @@ public:
 
     virtual ~BadFile() throw () {}
 
-    virtual const char* what() const throw ()
+    virtual const char* what() const noexcept
     {
         return m_msg.c_str();
     }
@@ -66,9 +66,7 @@ int main()
                 std::cout << "file accessed successfully\n";
             }
 
-//            if (i == 1) {
-//                throw std::runtime_error("Bye bye cruel world !");
-//            }
+            throw BadFile("fuck this shit");
         }
     }
     catch(...) {
