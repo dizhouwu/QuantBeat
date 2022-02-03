@@ -1,7 +1,9 @@
 class BadFile(Exception):
     pass
 
+
 from contextlib import contextmanager
+
 
 @contextmanager
 def file_handler(file, mode):
@@ -15,6 +17,7 @@ def file_handler(file, mode):
     finally:
         print("file resource released\n")
         resource.close()
+
 
 try:
     with file_handler("test.txt", "w+") as f:
