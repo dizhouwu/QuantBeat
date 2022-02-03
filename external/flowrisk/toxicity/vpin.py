@@ -6,18 +6,15 @@
 import numpy as np
 import pandas as pd
 
-from flowrisk.measure import RecursiveMeasure, BulkMeasure
-from flowrisk.tools.vol import Vol, RecursiveEWMAVol
-from flowrisk.toxicity.bulk import Buckets, RecursiveBulkClassMABuckets
-from flowrisk.tools.band import Band, RecursiveEWMABand
+from measure import RecursiveMeasure, BulkMeasure
+from tools.vol import Vol, RecursiveEWMAVol
+from toxicity.bulk import Buckets, RecursiveBulkClassMABuckets
+from tools.band import Band, RecursiveEWMABand
 
 
-class Config(object):
+class Config:
 
     SYMBOL = ""
-
-    def __init__(self):
-        pass
 
     def summary(self):
         print("\nConfigurations:\n")
