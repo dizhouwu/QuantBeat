@@ -17,8 +17,6 @@ class ConvexLinearModel(BaseEstimator, RegressorMixin):
         return self
 
     def predict(self, X):
-        check_is_fitted(self)
-        X = check_array(X)
         return np.dot(X, self.coef_)
 
     def fit_predict(self, X, y):
