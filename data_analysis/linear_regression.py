@@ -38,3 +38,6 @@ y_hat2 = lr.predict(data.iloc[:,2:])
 
 
 np.allclose(y_hat, y_hat2)
+
+cvx_lm.coef_
+lr.intercept_, lr.coef_[0]
