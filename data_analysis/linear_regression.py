@@ -33,6 +33,9 @@ cvx_lm = ConvexLinearModel(False)
 y_hat = cvx_lm.fit_predict(data.iloc[:,1:], data.iloc[:,0])
 
 lr = LinearRegression(fit_intercept=True).fit(data.iloc[:,2:], data.iloc[:,0])
+
+q, r = np.linalg.qr(data.iloc[:,1:])
+scipy.linalg.solve_triangular(r, q.T.dot(data.iloc[:,0]))
 y_hat2 = lr.predict(data.iloc[:,2:])
 
 
