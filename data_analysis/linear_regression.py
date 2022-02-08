@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.linear_model import LinearRegression
 from sklearn.base import BaseEstimator, RegressorMixin
 from cvxopt import matrix, solvers
 import pandas as pd
